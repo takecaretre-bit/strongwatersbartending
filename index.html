@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Strong Waters Bartending LLC | Mobile Bartending Service</title>
+  <meta name="description" content="Strong Waters Bartending LLC provides premium mobile bartending for private parties, weddings, corporate events, and celebrations." />
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Strong Waters Bartending home">
+      <img src="assets/logo.png" alt="Strong Waters Bartending logo">
+      <span>Strong Waters</span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="#book" class="nav-cta">Book Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Mobile Bartending Service • Cincinnati Roots • Columbus Events</p>
+        <h1>Premium drinks. Big personality. Unforgettable service.</h1>
+        <p class="hero-copy">Strong Waters Bartending LLC brings professional bar service, warm hospitality, and polished presentation to weddings, private parties, corporate events, birthdays, and special celebrations.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#book">Start Booking</a>
+          <a class="btn ghost" href="tel:16142558053">Call (614) 255-8053</a>
+        </div>
+      </div>
+      <div class="quote-card reveal delay">
+        <span>“Where every pour feels personal.”</span>
+      </div>
+    </section>
+
+    <section class="section intro-grid">
+      <div class="image-card reveal">
+        <img src="assets/contact-card.jpg" alt="Strong Waters Bartending contact card with cocktail">
+      </div>
+      <div class="section-copy reveal">
+        <p class="eyebrow gold">Strong Waters Experience</p>
+        <h2>A bar experience guests remember.</h2>
+        <p>From the first consultation to the final toast, Strong Waters Bartending focuses on making your event smooth, stylish, and easy to enjoy. You bring the people. We bring the energy, service, and professional touch.</p>
+        <div class="feature-list">
+          <span>Private Parties</span><span>Weddings</span><span>Corporate Events</span><span>Birthdays</span><span>VIP Gatherings</span><span>Custom Requests</span>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="services" class="section services">
+      <div class="center reveal">
+        <p class="eyebrow gold">What We Do</p>
+        <h2>Polished service for every kind of celebration.</h2>
+      </div>
+      <div class="reveal">
+        <div class="cards">
+          <article class="card reveal"><h3>Full-Service Bartending</h3><p>We provide the bar experience from setup to service, keeping the drinks flowing and the atmosphere elevated.</p></article>
+          <article class="card reveal"><h3>Client-Provided Alcohol</h3><p>Already have the alcohol handled? We’ll bring the skill, service, professionalism, and presentation.</p></article>
+          <article class="card reveal"><h3>Custom Event Requests</h3><p>Special theme, signature drinks, large guest count, or unique setup? Pricing is negotiable for custom needs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section pricing">
+      <div class="center reveal">
+        <p class="eyebrow gold">Simple Pricing</p>
+        <h2>Transparent per-person rates.</h2>
+        <p class="muted">Final pricing may adjust based on travel, event length, setup needs, and special requests.</p>
+      </div>
+      <div class="reveal">
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <span class="tag">Full Service</span>
+            <h3>$35 <small>/ person</small></h3>
+            <p>Best when Strong Waters provides everything needed for the bar experience.</p>
+            <ul><li>Professional bartender service</li><li>Event-ready presentation</li><li>Setup guidance</li><li>Negotiable custom requests</li></ul>
+          </article>
+          <article class="price-card featured reveal">
+            <span class="tag">Client Provides Alcohol</span>
+            <h3>$25 <small>/ person</small></h3>
+            <p>Best when the client provides alcohol and needs professional bartending service.</p>
+            <ul><li>Skilled service</li><li>Guest-friendly bartending</li><li>Clean, organized workflow</li><li>Great for private events</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="book" class="section booking">
+      <div class="booking-copy reveal">
+        <p class="eyebrow gold">Book Strong Waters</p>
+        <h2>Tell us about your event.</h2>
+        <p>Share a few details and Strong Waters will receive a clean, easy-to-read booking request at <strong>mikeallen513@yahoo.com</strong>.</p>
+      </div>
+      <form class="booking-form reveal" id="bookingForm">
+        <div class="form-row">
+          <label>Who's the party for?<input name="partyFor" required placeholder="Example: Birthday for Jasmine"></label>
+          <label>Event date<input type="date" name="eventDate" required></label>
+        </div>
+        <div class="form-row">
+          <label>What type of party is it?
+            <select name="partyType" required>
+              <option value="">Select one</option><option>Birthday Party</option><option>Wedding / Reception</option><option>Corporate Event</option><option>Private Party</option><option>Graduation</option><option>Anniversary</option><option>Baby Shower</option><option>Other / Special Request</option>
+            </select>
+          </label>
+          <label>Expected guest count
+            <select name="guestCount" required>
+              <option value="">Select guest count</option><option>25</option><option>25-50</option><option>50-75</option><option>75-100</option><option>100-125</option><option>125-150</option><option>150-200</option><option>200-250</option><option>250+</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>Service option
+            <select name="serviceOption" required>
+              <option value="">Select pricing option</option><option>$35/person — Strong Waters provides everything</option><option>$25/person — Client provides alcohol</option><option>Custom / Negotiable special request</option>
+            </select>
+          </label>
+          <label>Discount code<input name="discountCode" placeholder="CODE"></label>
+        </div>
+        <label>Tell us a little bit more!<textarea name="details" rows="5" placeholder="Add a brief description about your party and needs."></textarea></label>
+        <div class="form-row">
+          <label>Your name<input name="customerName" required placeholder="Full name"></label>
+          <label>Email<input type="email" name="email" required placeholder="you@example.com"></label>
+        </div>
+        <div class="form-row">
+          <label>Phone number<input name="phone" required placeholder="(555) 555-5555"></label>
+          <label>Event location<input name="location" placeholder="City / venue / address"></label>
+        </div>
+        <button class="btn primary wide" type="submit">Prepare Booking Email</button>
+        <p class="fine-print">This static preview uses your email app to send the request. The published site can be connected for automatic confirmations.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><img src="assets/logo.png" alt="Strong Waters Bartending logo"><p>Strong Waters Bartending LLC<br>Owner: Michael Allen</p></div>
+    <nav><a href="about.html">About</a><a href="careers.html">Careers</a><a href="sponsors.html">Sponsors</a><a href="contact.html">Contact</a></nav>
+    <div><p><a href="mailto:mikeallen513@yahoo.com">mikeallen513@yahoo.com</a><br><a href="tel:16142558053">(614) 255-8053</a></p></div>
+  </footer>
+</body>
+</html>
