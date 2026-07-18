@@ -46,6 +46,7 @@ function initGallery() {
       video.muted = true;
       video.playsInline = true;
       video.preload = 'metadata';
+      video.poster = 'assets/IMG_0277.jpg';
       video.setAttribute('aria-hidden', 'true');
       figure.appendChild(video);
 
