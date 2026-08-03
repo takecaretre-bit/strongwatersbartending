@@ -99,9 +99,8 @@
         <h2>Tell us about your event.</h2>
         <p>Share a few details and Strong Waters will receive a clean, easy-to-read booking request at <strong>mikeallen513@yahoo.com</strong>.</p>
       </div>
-      <form class="booking-form reveal" id="bookingForm" action="https://formsubmit.co/mikeallen513@yahoo.com" method="POST">
+      <form class="booking-form reveal" id="bookingForm" action="#" method="POST">
         <input type="hidden" name="_subject" value="Strong Waters Booking Request">
-        <input type="hidden" name="_captcha" value="false">
         <div class="form-row">
           <label>Who's the party for?<input name="partyFor" required placeholder="Example: Birthday for Jasmine"></label>
           <label>Event date<input type="date" name="eventDate" required></label>
@@ -137,12 +136,37 @@
           <label>Phone number<input name="phone" required placeholder="(555) 555-5555"></label>
           <label>Event location<input name="location" placeholder="City / venue / address"></label>
         </div>
-        <button class="btn primary wide" type="submit">Prepare Booking Email</button>
-        <p class="fine-print">This static preview uses your email app to send the request. The published site can be connected for automatic confirmations.</p>
+        <button class="btn primary wide" type="submit">Open Booking Email</button>
+        <p class="fine-print">This will open your default email app with the booking details pre-filled.</p>
       </form>
     </section>
   </main>
 
+  <script>
+    const bookingForm = document.getElementById('bookingForm');
+    if (bookingForm) {
+      bookingForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formData = new FormData(bookingForm);
+        const email = 'mikeallen513@yahoo.com';
+        const subject = formData.get('_subject') || 'Strong Waters Booking Request';
+        const bodyLines = [
+          `Party for: ${formData.get('partyFor') || ''}`,
+          `Event date: ${formData.get('eventDate') || ''}`,
+          `Party type: ${formData.get('partyType') || ''}`,
+          `Guest count: ${formData.get('guestCount') || ''}`,
+          `Service option: ${formData.get('serviceOption') || ''}`,
+          `Details: ${formData.get('details') || ''}`,
+          `Name: ${formData.get('customerName') || ''}`,
+          `Email: ${formData.get('email') || ''}`,
+          `Phone: ${formData.get('phone') || ''}`,
+          `Location: ${formData.get('location') || ''}`
+        ];
+        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+        window.location.href = mailtoLink;
+      });
+    }
+  </script>
   <footer class="footer">
     <div><img src="assets/logo.png" alt="Strong Waters Bartending logo"><p>Strong Waters Bartending LLC<br>Owner: Michael Allen</p></div>
     <nav><a href="about.html">About</a><a href="careers.html">Careers</a><a href="sponsors.html">Sponsors</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav>
